@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<run>
+  <tool>
+    <title>Spin QuGate</title>
+    <about>Press Simulate to view results. Both single qubit gate and two qubit gate model is implmented. Remember to clear the results before start the next simulation. </about>
+    <command>python @tool/main.py @driver</command>
+  </tool>
+  <tool>
+    <title>log</title>
+    <about>Example of Rappture &lt;log&gt; output.</about>
+    <command>
+      tclsh @tool/log.tcl @driver
+    </command>
+  </tool>    
+
+  <input>
+    <phase id="two">
+      <about> <label>Device Structure</label> </about>
+<!--      <group id="info">
+        <about>
+          <label>Background Info.</label>
+        </about>
+        <note>
+            <contents>file://bysize.html</contents>
+        </note>      
+      </group>
+-->
+      <group id="main">
+        <about>
+          <label>Simulation Settings</label>
+        </about>
+
+        <loader>
+    	    <about>
+    	      <label>Model</label>
+    	      <description>Determines the device type to simulate.</description>
+    	    </about>
+    	    <example>douG.xml</example>
+    	    <example>sinG.xml</example>
+    	    <default>sinG.xml</default>
+        </loader>
+
+        <group id="tt">        
+          <about>
+            <label>Parameters</label>
+          </about>
+
+          <structure  id='s1'>
+            <about>
+                <label>Simulation Device</label>
+                <description>Picture of structure you are modifying.</description>
+            </about>
+          </structure>
+        </group>
+        
+        <group id='000'>
+          <about>
+            <label>Device instruction</label>
+          </about>        
+          <!--<structure  id='s2'>
+            <about>
+                <label>Simulation Device</label>
+                <description>Picture of structure you are modifying.</description>
+            </about>
+          </structure> --> 
+         <note>
+          </note> 
+        </group>      
+       </group>
+     </phase>
+  </input>
+</run>
